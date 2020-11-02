@@ -16,9 +16,9 @@
                 ]
             },
             {
-                "id":2,
-                "question":"Do you like the kandidates",
-                "answers":[
+                "id": 2,
+                "question": "Do you like the kandidates",
+                "answers": [
                     {
                         "answer": "Yes",
                         "count": 0
