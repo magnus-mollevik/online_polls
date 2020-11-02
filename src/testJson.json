@@ -1,0 +1,34 @@
+[
+    {
+        "questions": [
+            {
+                "id": 1,
+                "question": "Who will win the election",
+                "Answers": [
+                    {
+                        "answer": "Trump",
+                        "count": 0
+                    },
+                    {
+                        "answer": "Biden",
+                        "count": 0
+                    }
+                ]
+            },
+            {
+                "id":2,
+                "question":"Do you like the kandidates",
+                "answers":[
+                    {
+                        "answer": "Yes",
+                        "count": 0
+                    },
+                    {
+                        "answer": "No",
+                        "count": 0
+                    }
+                ]
+            }
+        ]
+    }
+]
