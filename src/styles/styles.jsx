@@ -15,3 +15,70 @@ export const LoginFormStyle = styled.form`
 
     
 `;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+export const NavBar = styled.nav`
+    display: flex;
+    background-color: #000000;
+    opacity: 0.72;
+
+    ul{
+        display: flex;
+        list-style: none;
+        color: white;
+        text-decoration: none;
+        flex-direction: row-reverse;
+        height: 50px;
+        flex-grow: inherit;
+        margin: 0;
+        margin-left: auto;
+    }
+
+    li{
+        margin: auto 20px;
+    }
+
+    p{
+        float: left;
+        color: white;
+        margin-left: 10px;
+    }
+
+    ul>li>a{
+        text-decoration: none;
+        color: white;
+        text-align: center;
+    }
+
+    ul>li>a:hover{
+        cursor: pointer;
+         text-decoration: underline;
+    }
+`;
