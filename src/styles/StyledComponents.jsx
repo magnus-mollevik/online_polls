@@ -1,4 +1,4 @@
-import styled, { css, keyframes } from 'styled-components';
+import styled from 'styled-components';
 
 export const FormStyle = styled.form`
     display: flex;
@@ -28,6 +28,9 @@ export const FormStyle = styled.form`
         font-size: x-large;
         border-radius: 0;
     }
+    &>input{
+        box-shadow: 0.5px 0.5px 2px black;
+    }
 `;
 
 
@@ -35,9 +38,11 @@ export const FormButton = styled.button`
     margin-top: auto;
     margin-bottom: 40px;
     border-radius: 5px;
-    background-color: white;
+    background-color:  #419639;
     height: 35px;
     border: 0px solid transparent;
+    color: white;
+    box-shadow: 0.5px 0.5px 2px black;
 
     :hover{
         background-color: darkgray;
@@ -51,6 +56,7 @@ export const NavBar = styled.nav`
     background-color: #000000;
     opacity: 0.72;
     flex-wrap: wrap;
+    box-shadow: 0px 2px 3px black;
 
     ul{
         display: flex;
@@ -117,7 +123,7 @@ export const CreatePollForm = styled.form`
         height: 650px;
         background-color: #3d3d3d;
         color: white;
-        border-radius: 5px;
+        border-radius: 10px;
         display: flex;
         flex-direction: column;
         box-shadow: 5px 5px 5px grey;
@@ -147,8 +153,8 @@ export const CreatePollForm = styled.form`
         margin-top: 10px;
         margin-bottom: 10px;
         &>div:nth-child(1) {order: 1;}
-        &>div:nth-child(3) {order: 1;}
-        &>button:nth-child(3) {order: 2;}
+        &>div:nth-child(2) {order: 0;}
+        &>section:nth-child(3) {order: 2;}
         
         &>div{
             margin-bottom: 30px;
@@ -162,7 +168,7 @@ export const CreatePollForm = styled.form`
         height: 200px;
         background-color: #3d3d3d;
         color: white;
-        border-radius: 5px;
+        border-radius: 10px;
         box-shadow: 5px 5px 5px grey;
     }
     section>*{
@@ -177,6 +183,7 @@ export const CreatePollForm = styled.form`
         margin-bottom: 5px;
         height: 30px;
         border-radius: 5px;
+        box-shadow: 0.5px 0.5px 2px black;
     }
 `;
 
@@ -205,6 +212,7 @@ export const CreateQuestionDiv = styled.div`
         text-align: center;
         margin: 0 auto;
         margin-top: 10px;
+
     }
     &>input{
         border: 0px solid transparent;
@@ -214,6 +222,7 @@ export const CreateQuestionDiv = styled.div`
         margin-bottom: 5px;
         height: 30px;
         border-radius: 5px;
+        box-shadow: 0.5px 0.5px 2px black;
     }
     &>*>ul{
         list-style: none;
@@ -226,6 +235,8 @@ export const CreateQuestionDiv = styled.div`
         width: 280px;
         border-radius: 5px;
         height: 320px;
+        margin-bottom: 5px;
+        box-shadow: 0.5px 0.5px 2px black;
     
     }
     &>div>p{
@@ -239,15 +250,34 @@ export const CreateQuestionDiv = styled.div`
 export const FinishPollButton = styled.button`
     margin-top: 20px;
     border-radius: 5px;
-    background-color: green;
+    background-color: #419639;
     height: 35px;
     border: 0px solid transparent;
     color: white;
     width: 170px;
     height: 40px;
     margin: 0 auto;
+    box-shadow: 0.5px 0.5px 2px black;
 
     &:hover{
+        background-color: grey;
+        cursor: pointer;
+    }
+`;
+
+export const ButtonBlue = styled.button`
+    border-radius: 5px;
+    background-color: #0082C8;
+    height: 25px;
+    border: 0px solid transparent;
+    color: white;
+    width: 100px;
+    height: 30px;
+    margin-top: auto;
+    margin-bottom: 40px;
+    box-shadow: 0.5px 0.5px 2px black;
+    &:hover{
+        cursor: pointer;
         background-color: grey;
     }
 `;

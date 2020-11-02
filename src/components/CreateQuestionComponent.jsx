@@ -1,5 +1,5 @@
 import React from "react";
-import { FormButton } from '../styles/StyledComponents';
+import { ButtonBlue } from '../styles/StyledComponents';
 import {CreateQuestionDiv} from '../styles/StyledComponents';
 
 const CreateQuestionComponent = () => {
@@ -9,7 +9,7 @@ const CreateQuestionComponent = () => {
             <input type="text"></input>
             <p>Answer</p>
             <input type="text"></input>
-            <FormButton>Add Answer</FormButton>
+            <ButtonBlue>Add Answer</ButtonBlue>
             <div>
                 <p>Answeres</p>
                 <ul>
@@ -17,7 +17,7 @@ const CreateQuestionComponent = () => {
                     <li>answer 2</li>
                 </ul>
             </div>
-            <FormButton>Add question</FormButton>
+            <ButtonBlue>Add question</ButtonBlue>
         </CreateQuestionDiv>
     )
 }
