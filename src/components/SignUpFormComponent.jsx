@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
-import '../styles/SignUpForm.css'
+import { FormStyle } from '../styles/styles';
+import { FormButton } from '../styles/styles';
 
 class SignUpForm extends Component {
     render() {
         return (
-            <form className="SignUpForm">
+            <FormStyle className="SignUpForm">
                 <p>SignUp</p>
                 <p>Email</p>
                 <input type="text" placeholder="Email" autoComplete="email"></input>
@@ -12,8 +13,8 @@ class SignUpForm extends Component {
                 <input type="password" placeholder="Password" autoComplete="current-password"></input>
                 <p>Repeat Password</p>
                 <input type="password" placeholder="Password" autoComplete="current-password"></input>
-                <button>SignUp</button>
-            </form>
+                <FormButton>SignUp</FormButton>
+            </FormStyle>
         )
     }
 }
