@@ -1,0 +1,39 @@
+.Navigation{
+    display: flex;
+    background-color: #000000;
+    opacity: 0.72;
+}
+
+.NavigatonList{
+    display: flex;
+    list-style: none;
+    color: white;
+    text-decoration: none;
+    flex-direction: row-reverse;
+    height: 50px;
+    flex-grow: inherit;
+    margin: 0;
+    margin-left: auto;
+}
+
+.NavigatonList>li>a{
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+
+.NavigatonList>li>a:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.NavigatonList>li{
+    margin: auto 20px;
+}
+
+.Navigation>p{
+    float: left;
+    color: white;
+    margin-left: 10px;
+}
+

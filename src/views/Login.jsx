@@ -1,10 +1,9 @@
 import React from 'react';
+import LoginFormComponent from '../components/LoginFormComponent'
 
 const Login = props => {
   return (
-    <div>
-      <h3>Login View</h3>
-    </div>
+    <LoginFormComponent></LoginFormComponent>
   );
 };
 

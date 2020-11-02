@@ -1,10 +1,9 @@
 import React from 'react';
+import SignUpFormComponent from '../components/SignUpFormComponent'
 
 const SignUp = props => {
   return (
-    <div>
-      <h3>SignUp View</h3>
-    </div>
+    <SignUpFormComponent></SignUpFormComponent>
   );
 };
 
