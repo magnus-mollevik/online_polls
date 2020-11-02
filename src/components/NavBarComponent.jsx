@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
 import {NavLink} from 'react-router-dom'
-import '../styles/NavBar.css'
 import { NavBar } from '../styles/styles';
 
 
@@ -11,12 +10,12 @@ class NavBarComponent extends Component {
             <NavBar>
                 <p>Online polls</p>
                 <ul>
-                    <li><Link to="/Login">Login</Link></li>
-                    <li><Link to="/SignUp">Sign up</Link></li>
+                    <li><NavLink activeClassName="active" to="/Login">Login</NavLink></li>
+                    <li><NavLink activeClassName="active" to="/SignUp">Sign up</NavLink></li>
                     <li><p>|</p></li>
-                    <li><Link to="/DoPoll">Do Poll</Link></li>
-                    <li><Link to="/Create">Create</Link></li>
-                    <li><Link to="/Home">Home</Link></li>
+                    <li><NavLink activeClassName="active" to="/DoPoll">Do Poll</NavLink></li>
+                    <li><NavLink activeClassName="active" to="/Create">Create</NavLink></li>
+                    <li><NavLink activeClassName="active" to="/Home">Home</NavLink></li>
                 </ul>
             </NavBar>
         )

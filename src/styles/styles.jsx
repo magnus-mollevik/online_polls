@@ -78,10 +78,13 @@ export const NavBar = styled.nav`
         color: white;
         text-align: center;
     }
+    ul>li>.active{
+        border-bottom: 1px solid white;
+    }
 
     ul>li>a:hover{
         cursor: pointer;
-         text-decoration: underline;
+        border-bottom: 1px solid white;
     }
 `;
 
