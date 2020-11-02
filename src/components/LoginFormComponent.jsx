@@ -1,17 +1,18 @@
 import React, { Component } from "react";
-import '../styles/LoginForm.css'
+import '../styles/LoginForm.css';
+import { LoginFormStyle } from '../styles/styles';
 
 class LoginForm extends Component {
     render() {
         return (
-            <form className="LoginForm">
+            <LoginFormStyle className="LoginForm">
                 <p>Login</p>
                 <p>Email</p>
                 <input type="text" placeholder="Email" autoComplete="email"></input>
                 <p>Password</p>
                 <input type="password" placeholder="Password" autoComplete="current-password"></input>
                 <button>Login</button>
-            </form>
+            </LoginFormStyle>
         )
     }
 }
