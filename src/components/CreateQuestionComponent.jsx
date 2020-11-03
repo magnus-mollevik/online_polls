@@ -21,4 +21,5 @@ const CreateQuestionComponent = () => {
         </CreateQuestionDiv>
     )
 }
+
 export default CreateQuestionComponent
