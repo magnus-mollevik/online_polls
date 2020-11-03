@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import { ButtonBlue } from '../styles/StyledComponents';
 import { CreateQuestionDiv } from '../styles/StyledComponents';
 
-const CreateQuestionComponent = (props) => {
+const CreateQuestionComponent = ({ addQuestionToList }) => {
     const [answersList, setAnswersList] = useState([]);
     const [answer, setAnswer] = useState("");
+    const [question, setQuestion] = useState("");
 
     const handleAnswer = (e) => {
         e.preventDefault();
@@ -16,17 +17,44 @@ const CreateQuestionComponent = (props) => {
                 }
             })
             if (!exist) {
-                answersList.push(answer)
+                answersList.push(answer);
                 setAnswersList(answersList);
                 handleAnswerChange(e);
             }
+            else {
+                alert("answer allready exists");
+            }
         }
+    };
 
+    const handleQuestionChange = (e) => {
+        const input = e.target.value;
+        setQuestion(input);
     };
 
     const handleQuestion = (e) => {
-
+        e.preventDefault();
+        const QuestionWithAnswers = {
+            question: question,
+            answersList: answersList
+        }
+        if (QuestionWithAnswers.answersList.length < 0) {
+            alert("You haven't added any answers")
+        }
+        if (QuestionWithAnswers.question === "") {
+            alert("Please add a question")
+        }
+        else {
+            addQuestionToList(QuestionWithAnswers);
+            clearAll();
+        }
     };
+
+    const clearAll = () => {
+        setAnswersList([]);
+        setAnswer("");
+        setQuestion("");
+    }
 
     const handleAnswerChange = (e) => {
         const input = e.target.value;
@@ -36,12 +64,12 @@ const CreateQuestionComponent = (props) => {
     return (
         <CreateQuestionDiv>
             <p>Question</p>
-            <input type="text"></input>
+            <input value={question} onChange={handleQuestionChange} type="text"></input>
             <p>Answer</p>
             <input value={answer} onChange={handleAnswerChange} type="text"></input>
             <ButtonBlue onClick={handleAnswer}>Add Answer</ButtonBlue>
             <div>
-                <p>Answeres</p>
+                <p>{question}</p>
                 <ul>{answersList.map((item) => {
                     return <li key={item}>{item}</li>
                 })}
@@ -51,7 +79,5 @@ const CreateQuestionComponent = (props) => {
         </CreateQuestionDiv>
     )
 }
-
-
 
 export default CreateQuestionComponent
