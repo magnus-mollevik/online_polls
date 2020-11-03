@@ -188,7 +188,8 @@ export const CreatePollForm = styled.form`
 `;
 
 export const QuestionListDiv = styled.div`
-    
+    overflow-y:auto;
+
     &>*{
         text-align: center;
         margin: 0 auto;
@@ -201,9 +202,22 @@ export const QuestionListDiv = styled.div`
     &>ul{
         list-style: none;
         padding: 0;
+        margin-top: 0;
     }
+    
     &>ul>li{
-        margin: 10px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        width: 170px;
+    }
+    &>ul>li>ul{
+        list-style: none;
+        padding: 0;
+        font-size: small;
+    }
+
+    &>ul>li>ul:first-child{
+        border-top: 1px solid white;
     }
 `;
 
