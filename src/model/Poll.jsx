@@ -1,15 +1,15 @@
 class Poll {
     pollName;
     creatorId;
-    questionsArray = [];
+    questions = [];
 
-    constructor(pollName, creatorId){
+    constructor(pollName, creatorId) {
         this.pollName = pollName;
         this.CreatorId = creatorId;
     }
 
-    addQuestion(question){
-        this.questionsArray.push(question);
+    addQuestion(question) {
+        this.questions.push(question);
     }
 }
 
@@ -29,8 +29,8 @@ class Question {
 }
 
 class Answer {
-    count = 0;
     answer;
+    count = 0;
 
     constructor(answer) {
         this.answer = answer
