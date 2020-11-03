@@ -1,38 +1,40 @@
-class Poll {
-    pollName;
-    creatorId;
-    questions = [];
+import React ,{useState} from 'react';
 
-    constructor(pollName, creatorId) {
-        this.pollName = pollName;
-        this.CreatorId = creatorId;
+export const Poll = () => {
+    const [pollName, setPollName] = useState("");
+    const [creatorId, setCreatorId] = useState(0);
+    const [questions, setQuestions] = useState([])
+    return{
+        pollName,
+        setPollName,
+        creatorId,
+        setCreatorId,
+        questions,
+        setQuestions
     }
+};
 
-    addQuestion(question) {
-        this.questions.push(question);
+export const Question = () => {
+    const [question, setQuestion] = useState("")
+    const [id, setId] = useState(0);
+    const [answers, setAnswers] = useState([]);
+    return{
+        question,
+        setQuestion,
+        id,
+        setId,
+        answers,
+        setAnswers
     }
 }
 
-class Question {
-    id;
-    question;
-    answers = []
-
-    constructor(question) {
-        this.question = question
-    }
-
-    addAnswer(answer) {
-        this.answers.push(new Answer(answer));
-    }
-
-}
-
-class Answer {
-    answer;
-    count = 0;
-
-    constructor(answer) {
-        this.answer = answer
+export const Answer = () => {
+    const [answer, setAnswer] = useState("");
+    const [id, setId] = useState(0);
+    return{
+        answer,
+        setAnswer,
+        id,
+        setId
     }
 }
