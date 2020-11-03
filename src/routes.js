@@ -11,7 +11,6 @@ export const Routes = () => {
   return (
     <div>
       <NavBarComponent />
-      
       <Switch>
         <Route exact path="/Home" component={Home} />
         <Route exact path="/">

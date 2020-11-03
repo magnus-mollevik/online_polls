@@ -1,10 +1,8 @@
 import React from 'react';
-
+import CreatePollComponent from '../components/CreatePollComponent'
 const Create = props => {
   return (
-    <div>
-      <h3>Create View</h3>
-    </div>
+    <CreatePollComponent></CreatePollComponent>
   );
 };
 
