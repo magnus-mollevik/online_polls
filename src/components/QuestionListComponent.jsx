@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { QuestionListDiv } from '../styles/StyledComponents'
 
 const QuestionListComponent = ({ questionList }) => {
