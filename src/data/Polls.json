@@ -1,32 +1,32 @@
 [
     {
-        "PollName": "UsElection",
-        "CreatorId": 1,
+        "pollName": "UsElection",
+        "creator": 1,
         "users": [],
         "questions": [
             {
-                "question": "Who will win the election",
+                "questionDescription": "Who will win the election",
                 "Answers": [
                     {
-                        "answer": "Trump",
-                        "count": 0
+                        "answerDescription": "Trump",
+                        "voteCount": 0
                     },
                     {
-                        "answer": "Biden",
-                        "count": 0
+                        "answerDescription": "Biden",
+                        "voteCount": 0
                     }
                 ]
             },
             {
-                "question": "Do you like the kandidates",
+                "questionDescription": "Do you like the kandidates",
                 "answers": [
                     {
-                        "answer": "Yes",
-                        "count": 0
+                        "answerDescription": "Yes",
+                        "voteCount": 0
                     },
                     {
-                        "answer": "No",
-                        "count": 0
+                        "answerDescription": "No",
+                        "voteCount": 0
                     }
                 ]
             }
