@@ -6,7 +6,7 @@
         "questions": [
             {
                 "questionDescription": "Who will win the election",
-                "Answers": [
+                "answers": [
                     {
                         "answerDescription": "Trump",
                         "voteCount": 0
