@@ -2,9 +2,9 @@
     {
         "PollName": "UsElection",
         "CreatorId": 1,
+        "users": [],
         "questions": [
             {
-                "id": 1,
                 "question": "Who will win the election",
                 "Answers": [
                     {
@@ -18,7 +18,6 @@
                 ]
             },
             {
-                "id": 2,
                 "question": "Do you like the kandidates",
                 "answers": [
                     {
