@@ -24,7 +24,6 @@ const Home = () => {
     <div>
       {error && <p>{error}</p>}
       {polls && <UndetailedComponent polls = {polls}></UndetailedComponent>}
-      
     </div>
   );
 };
