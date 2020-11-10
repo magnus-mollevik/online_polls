@@ -1,7 +1,7 @@
 import React from 'react'
 import { QuestionListDiv } from '../styles/StyledComponents'
 
-const AnswerPollQuestionComponent = ({ questionList }) => {
+const AnswerPollQuestionComponent = ({ questionList, setPoll }) => {
     const questions = [...questionList];
     return (
         <QuestionListDiv>
@@ -13,7 +13,7 @@ const AnswerPollQuestionComponent = ({ questionList }) => {
                             <form>
                                 {question.answers.map((answer) => {
                                     return <li key={answer.id}>
-                                        <input type="radio" name={question} value={answer.answerDescription}/>{answer.answerDescription}
+                                        <input type="radio" name={question}  value={answer.answerDescription}/>{answer.answerDescription}
                                     </li>
                                 })}
                             </form>

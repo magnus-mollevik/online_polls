@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import  AnswerPollQuestionComponent from './AnswerPollQuestionComponent';
-import {UndetailedPollSection, UndetailedPollSectionWrapper} from '../styles/StyledComponents';
+import {UndetailedPollSection, UndetailedPollSectionWrapper, FormButton} from '../styles/StyledComponents';
 
 
-const DoPollComponent = ({poll}) => {
-    
+const DoPollComponent = ({poll, setPoll}) => {
+
+
     return(
         <UndetailedPollSection>
         <h1>{poll.pollName}</h1>
-        <AnswerPollQuestionComponent questionList={poll.questions}/>
+        <AnswerPollQuestionComponent setPoll={setPoll} questionList={poll.questions}/>
         </UndetailedPollSection>
-    
+        
     )
 };
 

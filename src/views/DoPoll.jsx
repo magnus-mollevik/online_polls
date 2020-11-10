@@ -38,7 +38,7 @@ const DoPoll = props => {
       <input type='text' value={pollId} onChange={handleInput} />
       <button onClick={fetchPoll}>Søk</button>
       {error && <h1>{error}</h1>}
-      {poll && <DoPollComponent poll={poll}/> }
+      {poll && <DoPollComponent setPoll={setPoll} poll={poll}/> }
     </div>
 
   );
