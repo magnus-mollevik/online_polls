@@ -13,7 +13,7 @@ const AnswerPollQuestionComponent = ({ questionList }) => {
                             <form>
                                 {question.answers.map((answer) => {
                                     return <li key={answer.id}>
-                                        <input type="radio"  value={answer.answerDescription}></input>
+                                        <input type="radio" name={question} value={answer.answerDescription}/>{answer.answerDescription}
                                     </li>
                                 })}
                             </form>
