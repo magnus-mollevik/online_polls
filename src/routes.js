@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import Home from "./views/Home";
 import Create from "./views/Create";
 import DoPoll from "./views/DoPoll";
@@ -10,7 +10,7 @@ import { Route, Switch, Redirect } from "react-router-dom";
 export const Routes = () => {
   return (
     <div>
-      <NavBarComponent />
+      <NavBarComponent/>
       <Switch>
         <Route exact path="/Home" component={Home} />
         <Route exact path="/">

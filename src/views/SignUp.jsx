@@ -1,7 +1,7 @@
 import React from 'react';
 import SignUpFormComponent from '../components/SignUpFormComponent'
 
-const SignUp = props => {
+const SignUp = (loggedInn) => {
   return (
     <SignUpFormComponent></SignUpFormComponent>
   );

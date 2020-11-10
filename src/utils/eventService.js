@@ -4,6 +4,7 @@ const API_POLL_URL = "/polls";
 const API_POLL_CREATE_URL = "/polls/create";
 const API_POLL_UPDATE_URL = "/polls/update";
 const API_POLL_DELETE_URL = "/polls/delete";
+const API_USER_CREATE_URL = "/users/create";
 
 export const list = async () => {
     try{
@@ -49,6 +50,15 @@ export const remove = async (data, id) => {
         return err.response.data;
     }
 };
+
+export const register = async (data) =>{
+    try{
+        return await http.post(`${API_USER_CREATE_URL}`,data)
+    }
+    catch(err){
+        return err.response.data;
+    }
+}
 
 export default {
     list,
