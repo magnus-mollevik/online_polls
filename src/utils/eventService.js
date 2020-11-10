@@ -1,9 +1,9 @@
 import http from './http.js';
 
 const API_POLL_URL = "/polls";
-const API_POLL_CREATE_URL = "/poll/create";
-const API_POLL_UPDATE_URL = "/poll//update";
-const API_POLL_DELETE_URL = "/delete";
+const API_POLL_CREATE_URL = "/polls/create";
+const API_POLL_UPDATE_URL = "/polls/update";
+const API_POLL_DELETE_URL = "/polls/delete";
 
 export const list = async () => {
     try{

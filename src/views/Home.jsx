@@ -2,22 +2,19 @@ import React, { useState, useEffect } from 'react';
 import UndetailedComponent from '../components/UndetailedPollComponent';
 import { list } from '../utils/eventService.js';
 
-
-
-
 const Home = () => {
+  
   const [polls, setPolls] = useState([]);
   const [error, setError] = useState([]);
-  useEffect(() => {
+  
+  useEffect(() =>{
     const fetchData = async () => {
-      const { data, error } = await list();
-      console.log(data);
-      if (error) {
+      const {data, error } = await list();
+      if(error){
         setError(error);
       }
       else {
         setPolls(data);
-        console.log(data);
       }
     };
     fetchData();
@@ -26,7 +23,7 @@ const Home = () => {
   return (
     <div>
       {error && <p>{error}</p>}
-      <UndetailedComponent></UndetailedComponent>
+      {polls && <UndetailedComponent polls = {polls}></UndetailedComponent>}
     </div>
   );
 };
