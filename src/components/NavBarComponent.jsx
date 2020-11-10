@@ -31,7 +31,7 @@ const NavBarComponent = () => {
             <NavBar>
                 <p>Online polls</p>
                 <ul>
-                    <li><p onClick={loggOut}>Logg out</p></li>
+                    <li><p className="loggOut" onClick={loggOut}>Logg out</p></li>
                     <li><p>{user.email}</p></li>
                     <li><p>|</p></li>
                     <li><NavLink activeClassName="active" to="/DoPoll">Do Poll</NavLink></li>

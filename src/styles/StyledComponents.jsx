@@ -109,6 +109,11 @@ export const NavBar = styled.nav`
             margin: 0 auto;
         }
     }
+
+    .loggOut:hover{
+        cursor: pointer;
+        border-bottom: 1px solid white;
+    }
 `;
 
 export const CreatePollForm = styled.form`
