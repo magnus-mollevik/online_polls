@@ -296,5 +296,35 @@ export const ButtonBlue = styled.button`
     }
 `;
 
+export const UndetailedPollSectionWrapper = styled.section`
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+`;
+
+export const UndetailedPollSection = styled.section`
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+    width: 350px;
+    margin: 0 auto;
+    height: 400px;
+    margin-top: 50px;
+    background-color: #3d3d3d;
+    box-shadow: 5px 5px 5px grey;
+
+    &>ul{
+        list-style: none;
+        padding: 0;
+    }
+    
+    &>ul>div>ul{
+        list-style: none;
+        padding: 0;
+    }
+`;
+
 
 
