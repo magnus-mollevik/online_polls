@@ -7,7 +7,7 @@ import axios from 'axios';
 //Loginmetodikken er hentet fra https://www.freecodecamp.org/news/how-to-persist-a-logged-in-user-in-react/
 
 const LoginForm = () => {
-    
+
     /*useEffect(() => {
         const loggedInUser = localStorage.getItem("user");
         if (loggedInUser) {
@@ -23,7 +23,7 @@ const LoginForm = () => {
     const handleEmailInpt = (e) => {
         let inptEmail = e.target.value;
         setEmail(inptEmail);
-    }; 
+    };
 
     const handlePasswordInpt = (e) => {
         let inptPassword = e.target.value;
@@ -32,19 +32,17 @@ const LoginForm = () => {
 
     const handleLogin = async (e) => {
         e.preventDefault();
-        const tempUser = { email : email, password : password };
-        console.log(tempUser);
-        // send the username and password to the server
-        const response = await login(tempUser);
-        // set the state of the user
-        setUser(response.data)
-        // store the user in localStorage
-        localStorage.setItem('user', response.data)
-        console.log(response.data)
-        console.log(localStorage.user);
+        const response = await login(
+            {
+                email: email,
+                password: password
+            });
+
+        console.log(response.data.email)
+        localStorage.clear();
+        localStorage.setItem('user', response.data.email);
+        window.location="/Home";
     };
-
-
 
     return (
         <FormStyle>
@@ -56,7 +54,6 @@ const LoginForm = () => {
             <FormButton onClick={handleLogin}>Login</FormButton>
         </FormStyle>
     );
-
 };
 
 

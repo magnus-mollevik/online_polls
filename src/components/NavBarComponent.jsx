@@ -6,10 +6,9 @@ import {loggoutButton} from '../styles/StyledComponents'
 
 const NavBarComponent = () => {
     const loggOut = () => {
-        localStorage.clear();
-        window.location.reload();
+    localStorage.clear();
+    window.location.reload();
     }
-
     if (localStorage.getItem('user') === null) {
         return (
             <NavBar>
@@ -25,14 +24,14 @@ const NavBarComponent = () => {
             </NavBar>
         )
     }
+    
     else {
-        const user = JSON.parse(localStorage.getItem('user'));
         return (
             <NavBar>
                 <p>Online polls</p>
                 <ul>
                     <li><p className="loggOut" onClick={loggOut}>Logg out</p></li>
-                    <li><p>{user.email}</p></li>
+                    <li><p>{localStorage.getItem('user')}</p></li>
                     <li><p>|</p></li>
                     <li><NavLink activeClassName="active" to="/DoPoll">Do Poll</NavLink></li>
                     <li><NavLink activeClassName="active" to="/Create">Create</NavLink></li>

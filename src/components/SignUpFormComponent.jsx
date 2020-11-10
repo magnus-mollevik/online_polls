@@ -1,7 +1,7 @@
 import React, { Component, useState } from 'react'
 import { FormStyle } from '../styles/StyledComponents';
 import { FormButton } from '../styles/StyledComponents';
-import {register} from '../utils/eventService.js';
+import { register } from '../utils/eventService.js';
 
 const SignUpForm = () => {
     const [error, setError] = useState([]);
@@ -37,8 +37,10 @@ const SignUpForm = () => {
             }
             else {
                 setMessage("User " + email + " created");
-                console.log(data);
-                localStorage.setItem('user', JSON.stringify(data));
+                console.log(data.email);
+                localStorage.clear();
+                localStorage.setItem('user', data.email);
+                window.location = "/Home";
             }
         };
         sendData();
@@ -46,7 +48,7 @@ const SignUpForm = () => {
 
     //needs to write to db
     const registerUser = (e) => {
-        //e.preventDefault();
+        e.preventDefault();
         if (email !== "" && password !== "" && confirmedPassword !== "") {
             if (!email.includes("@") && !email.includes(".")) {
                 setMessage("Real email needed")
