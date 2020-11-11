@@ -19,7 +19,8 @@ const DoPoll = props => {
     if (pollId) {
       const { data, error } = await get(pollId);
       if (error) {
-        setError("Poll not found");
+        setPoll(null);
+        setError("No such poll, try again");
       }
       else {
         setPoll(data);
