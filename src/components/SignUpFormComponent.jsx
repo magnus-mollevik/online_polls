@@ -40,6 +40,7 @@ const SignUpForm = () => {
                 console.log(data.email);
                 localStorage.clear();
                 localStorage.setItem('user', data.email);
+                localStorage.setItem('id', data._id);
                 window.location = "/Home";
             }
         };

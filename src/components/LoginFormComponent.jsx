@@ -41,6 +41,7 @@ const LoginForm = () => {
         console.log(response.data.email)
         localStorage.clear();
         localStorage.setItem('user', response.data.email);
+        localStorage.setItem('id', response.data._id);
         window.location="/Home";
     };
 

@@ -35,14 +35,14 @@ const CreatePollComponent = () => {
 
         const poll = {
             pollName: pollName,
-            creator: "5fa9618f4a5bec4ae8630bfc",
+            creator: localStorage.getItem('id'),
             questions: questionList,
         }
 
         const createPollFormatted = () => {
             const PollFormated = {
                 pollName: pollName,
-                creator: "5fa9618f4a5bec4ae8630bfc",
+                creator: poll.creator,
                 questions: [],
             }
 
@@ -57,13 +57,13 @@ const CreatePollComponent = () => {
             });
 
             //formattes the answers to match the schema
-            for(let i = 0; i < PollFormated.questions.length; i++){
+            for (let i = 0; i < PollFormated.questions.length; i++) {
                 poll.questions[i].answersList.forEach(oldAnswer => {
-                PollFormated.questions[i].answers.push({
-                    answerDescription: oldAnswer,
-                    voteCount: 0,
+                    PollFormated.questions[i].answers.push({
+                        answerDescription: oldAnswer,
+                        voteCount: 0,
+                    });
                 });
-            });
             }
 
             console.log(PollFormated)
@@ -86,19 +86,34 @@ const CreatePollComponent = () => {
         sendData();
     }
 
+    const goToLogin = (e) =>{
+        e.preventDefault();
+        window.location="/Login";
+    }
 
-    return (
-        <CreatePollForm>
-            <QuestionListComponent questionList={questionList} />
-            <CreateQuestionComponent addQuestionToList={addQuestionToList} />
+  
+        return (
+            <CreatePollForm> {localStorage.getItem('id') ? 
+            <>
+                <QuestionListComponent questionList={questionList} />
+                <CreateQuestionComponent addQuestionToList={addQuestionToList} />
+                <section>
+                    <p>Poll name</p>
+                    <input value={pollName} onChange={handlePollNameChange} type="text"></input>
+                    <FinishPollButton onClick={addPoll}>Save Poll</FinishPollButton>
+                </section>
+                </>
+            :
             <section>
-                <p>Poll name</p>
-                <input value={pollName} onChange={handlePollNameChange} type="text"></input>
-                <FinishPollButton onClick={addPoll}>Save Poll</FinishPollButton>
+            <p>You need to login</p>
+            <FinishPollButton onClick={goToLogin}>Login</FinishPollButton>
             </section>
+            }
 
-        </CreatePollForm>
-    )
+            </CreatePollForm>
+        )
+    
+   
 }
 
 export default CreatePollComponent
