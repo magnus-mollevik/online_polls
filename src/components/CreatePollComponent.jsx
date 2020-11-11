@@ -70,9 +70,12 @@ const CreatePollComponent = () => {
             return PollFormated;
         }
         sendPollToApi(createPollFormatted());
+        
+
     }
 
     const sendPollToApi = (poll) => {
+    
         const sendData = async () => {
             const { data, error } = await create(poll);
             if (error) {
@@ -81,9 +84,12 @@ const CreatePollComponent = () => {
             else {
                 console.log("success posted!")
                 console.log(data);
+                console.log(data._id);
+                localStorage.setItem('latestPollId', data._id);
             }
         };
         sendData();
+        window.location="/DoPoll";
     }
 
     const goToLogin = (e) =>{
