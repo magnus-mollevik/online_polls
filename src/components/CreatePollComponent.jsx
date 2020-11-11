@@ -82,10 +82,7 @@ const CreatePollComponent = () => {
                 setError(error);
             }
             else {
-                console.log("success posted!")
-                console.log(data);
-                console.log(data._id);
-                localStorage.setItem('latestPollId', data._id);
+                localStorage.setItem('latestPollName', data.pollName);
             }
         };
         sendData();
