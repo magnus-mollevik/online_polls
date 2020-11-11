@@ -66,7 +66,7 @@ export const login = async (data) => {
         return await http.post(`${API_USER_LOGIN_URL}`, data);
     }
     catch(err){
-        return err.respone.data
+        return err.response.data
     }
 }
 
