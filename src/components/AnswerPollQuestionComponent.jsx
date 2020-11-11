@@ -26,6 +26,7 @@ const AnswerPollQuestionComponent = ({ pollProp, setPoll, setShowResult }) => {
     }
     return (
         <QuestionListDiv>
+                <h1>{poll.pollName}</h1>
                 <p>Questions</p>
                 <ul>
                     {poll.questions.map((question) => {

@@ -9,11 +9,10 @@ const DoPollComponent = ({ poll, setPoll }) => {
     const [showResult, setShowResult] = useState(false);
 
     return (
-        <UndetailedPollSectionWrapper>
-            <h4>ID: {poll._id}</h4>
+        <UndetailedPollSection>
             {!showResult ? <AnswerPollQuestionComponent setPoll={setPoll} pollProp={poll} setShowResult={setShowResult} />
             : <ShowResultComponent pollProp={poll}/>}
-        </UndetailedPollSectionWrapper>
+        </UndetailedPollSection>
     )
 };
 

@@ -7,7 +7,7 @@ const ShowResultComponent = ({ pollProp }) => {
     const poll = pollProp;
 
     return (
-        <UndetailedPollSection>
+        <QuestionListDiv>
             <h2 key={poll.id}>{poll.pollName}</h2>
             <ul>
                 {poll.questions.map((question) => {
@@ -23,7 +23,7 @@ const ShowResultComponent = ({ pollProp }) => {
                     </div>
                 })}
             </ul>
-        </UndetailedPollSection>
+        </QuestionListDiv>
     )
 }
 export default ShowResultComponent;
