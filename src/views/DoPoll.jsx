@@ -11,9 +11,9 @@ const DoPoll = props => {
   const [pollId, setPollId] = useState('');
 
   useEffect( async () => {
-    const latestPollId = localStorage.getItem("latestPollId");
-    if (latestPollId) {
-      const { data, error } = await get(latestPollId);
+    const latestPollName = localStorage.getItem("latestPollName");
+    if (latestPollName) {
+      const { data, error } = await get(latestPollName);
       if (error) {
         setError("Poll not found");
       }
