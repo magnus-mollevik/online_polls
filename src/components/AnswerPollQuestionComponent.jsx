@@ -2,9 +2,8 @@ import React, { useState } from 'react';
 import { QuestionListDiv, ButtonBlue, UndetailedPollSection } from '../styles/StyledComponents';
 import { update } from '../utils/eventService';
 
-const AnswerPollQuestionComponent = ({ pollProp, setPoll }) => {
+const AnswerPollQuestionComponent = ({ pollProp, setPoll, setShowResult }) => {
     const poll = pollProp;
-    const [showResult, setShowResult] = useState(false);
 
     const onAnswerChange = (e) => {
         const answer = JSON.parse(e.currentTarget.value);
@@ -25,10 +24,8 @@ const AnswerPollQuestionComponent = ({ pollProp, setPoll }) => {
         await update(poll, poll._id);
         setShowResult(true);
     }
-
-    if (!showResult) {
-        return (
-            <QuestionListDiv>
+    return (
+        <QuestionListDiv>
                 <p>Questions</p>
                 <ul>
                     {poll.questions.map((question) => {
@@ -46,35 +43,8 @@ const AnswerPollQuestionComponent = ({ pollProp, setPoll }) => {
                     })}
                 </ul>
                 <ButtonBlue onClick={handleAnswers} style={{ marginTop: "30px" }}>Send</ButtonBlue>
-            </QuestionListDiv>
-        )
-    }
-    else {
-        return (
-            <UndetailedPollSection>
-                <h2 key={poll.id}>{poll.pollName}</h2>
-                <ul>
-                    {poll.questions.map((question) => {
-                        return <div key={question.id}>
-                            <h4>{question.questionDescription}</h4>
-                            <ul>
-                                {question.answers.map((answer) => {
-                                    return <li key={answer.id}>
-                                        {answer.answerDescription} votes: {answer.voteCount}
-                                    </li>
-                                })}
-                            </ul>
-                        </div>
-                    })}
-                </ul>
-            </UndetailedPollSection>
-
-        )
-    }
-
-
-
-
+            </QuestionListDiv>   
+    )
 }
 
 export default AnswerPollQuestionComponent;

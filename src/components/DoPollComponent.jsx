@@ -1,17 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import AnswerPollQuestionComponent from './AnswerPollQuestionComponent';
+import ShowResultComponent from './ShowResultComponent';
 import { UndetailedPollSection, UndetailedPollSectionWrapper, FormButton } from '../styles/StyledComponents';
 
 
 const DoPollComponent = ({ poll, setPoll }) => {
 
+    const [showResult, setShowResult] = useState(false);
 
     return (
-        <UndetailedPollSection>
+        <UndetailedPollSectionWrapper>
             <h4>ID: {poll._id}</h4>
-            <h3>{poll.pollName}</h3>
-            <AnswerPollQuestionComponent setPoll={setPoll} pollProp={poll} />
-        </UndetailedPollSection>
+            {!showResult ? <AnswerPollQuestionComponent setPoll={setPoll} pollProp={poll} setShowResult={setShowResult} />
+            : <ShowResultComponent pollProp={poll}/>}
+        </UndetailedPollSectionWrapper>
     )
 };
 
