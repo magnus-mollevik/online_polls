@@ -4,8 +4,8 @@ import { list } from '../utils/eventService.js';
 
 const Home = () => {
   
-  const [polls, setPolls] = useState([]);
-  const [error, setError] = useState([]);
+  const [polls, setPolls] = useState(null);
+  const [error, setError] = useState(null);
   
   useEffect(() =>{
     const fetchData = async () => {

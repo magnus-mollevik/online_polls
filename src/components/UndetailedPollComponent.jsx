@@ -4,11 +4,19 @@ import 'dotenv/config'
 
 const UndetailedPollComponent = ({polls}) => {
     const pollsFetched = [...polls];
+
+
+
+    const doPoll = (name) =>{
+        localStorage.setItem('latestPollName', name);
+        window.location="/dopoll";
+    }
+
+
     return (
-        <UndetailedPollSectionWrapper>{pollsFetched.map((poll) => {
-            return <UndetailedPollSection>
-                <h2 key={poll.id}>{poll.pollName}</h2>
-                <h4>Poll id: {poll._id}</h4>
+        <UndetailedPollSectionWrapper >{pollsFetched.map((poll) => {
+            return <UndetailedPollSection onClick={() => doPoll(poll.pollName)}>
+                <h2 key={poll._id}>{poll.pollName}</h2>
                 <ul>
                     {poll.questions.map((question) => {
                         return <div key={question.id}>
