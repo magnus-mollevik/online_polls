@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import Home from "./views/Home";
 import Create from "./views/Create";
 import DoPoll from "./views/DoPoll";

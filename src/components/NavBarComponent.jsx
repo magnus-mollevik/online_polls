@@ -1,7 +1,6 @@
-import React, { Component, useState } from "react";
+import React from "react";
 import { NavLink } from 'react-router-dom'
 import { NavBar } from '../styles/StyledComponents';
-import {loggoutButton} from '../styles/StyledComponents'
 
 
 const NavBarComponent = () => {

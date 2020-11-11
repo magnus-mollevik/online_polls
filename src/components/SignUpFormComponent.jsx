@@ -1,10 +1,9 @@
-import React, { Component, useState } from 'react'
+import React, { useState } from 'react'
 import { FormStyle } from '../styles/StyledComponents';
 import { FormButton } from '../styles/StyledComponents';
 import { register } from '../utils/eventService.js';
 
 const SignUpForm = () => {
-    const [error, setError] = useState([]);
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [confirmedPassword, setConfirmedPassword] = useState("");

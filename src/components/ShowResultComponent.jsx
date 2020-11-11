@@ -1,6 +1,6 @@
 
-import React, { useState } from 'react';
-import { QuestionListDiv, ButtonBlue, UndetailedPollSection } from '../styles/StyledComponents';
+import React from 'react';
+import { QuestionListDiv } from '../styles/StyledComponents';
 
 const ShowResultComponent = ({ pollProp }) => {
 

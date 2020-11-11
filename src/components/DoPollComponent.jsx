@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import AnswerPollQuestionComponent from './AnswerPollQuestionComponent';
 import ShowResultComponent from './ShowResultComponent';
-import { UndetailedPollSection, UndetailedPollSectionWrapper, FormButton } from '../styles/StyledComponents';
+import { UndetailedPollSection } from '../styles/StyledComponents';
 
 
 const DoPollComponent = ({ poll, setPoll }) => {

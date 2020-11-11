@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { FormStyle } from '../styles/StyledComponents';
 import { FormButton } from '../styles/StyledComponents';
 import { login } from '../utils/eventService';
-import axios from 'axios';
 
 //Loginmetodikken er hentet fra https://www.freecodecamp.org/news/how-to-persist-a-logged-in-user-in-react/
 
