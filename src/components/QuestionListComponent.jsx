@@ -4,6 +4,7 @@ import { QuestionListDiv } from '../styles/StyledComponents'
 const QuestionListComponent = ({ questionList }) => {
     const questions = [...questionList];
     return (
+        
         <QuestionListDiv>
             <p>Questions</p>
             <ul>
@@ -18,6 +19,8 @@ const QuestionListComponent = ({ questionList }) => {
                 })}
             </ul>
         </QuestionListDiv>
+            
+
     )
 }
 

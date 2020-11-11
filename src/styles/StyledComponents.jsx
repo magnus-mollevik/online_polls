@@ -321,6 +321,7 @@ export const UndetailedPollSection = styled.section`
     box-shadow: 5px 5px 5px grey;
 
     &>ul{
+        overflow-y:auto;
         list-style: none;
         padding: 0;
     }

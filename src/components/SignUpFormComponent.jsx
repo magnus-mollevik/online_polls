@@ -8,7 +8,7 @@ const SignUpForm = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [confirmedPassword, setConfirmedPassword] = useState("");
-    const [user, setUser] = useState({})
+    const [user, setUser] = useState({});
     const [message, setMessage] = useState(null);
 
     const handleEmailInpt = (e) => {
