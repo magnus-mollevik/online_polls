@@ -8,17 +8,9 @@ import axios from 'axios';
 
 const LoginForm = () => {
 
-    /*useEffect(() => {
-        const loggedInUser = localStorage.getItem("user");
-        if (loggedInUser) {
-          const foundUser = JSON.parse(loggedInUser);
-          setUser(foundUser);
-        }
-      }, []);*/
-
+    const [error, setError] = useState(null);
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [user, setUser] = useState({});
 
     const handleEmailInpt = (e) => {
         let inptEmail = e.target.value;
@@ -32,17 +24,23 @@ const LoginForm = () => {
 
     const handleLogin = async (e) => {
         e.preventDefault();
-        const response = await login(
+        
+        const { data, error } = await login(
             {
                 email: email,
                 password: password
             });
-
-        console.log(response.data.email)
-        localStorage.clear();
-        localStorage.setItem('user', response.data.email);
-        localStorage.setItem('id', response.data._id);
-        window.location="/Home";
+        if (error) {
+            setError("Wrong username or password");
+        }
+        
+        else {
+            setError(null);
+            localStorage.clear();
+            localStorage.setItem('user', data.email);
+            localStorage.setItem('id', data._id);
+            window.location = "/Home";
+        }
     };
 
     return (
@@ -52,6 +50,7 @@ const LoginForm = () => {
             <input type="text" placeholder="Email" autoComplete="email" onChange={handleEmailInpt}></input>
             <p>Password</p>
             <input type="password" placeholder="Password" autoComplete="current-password" onChange={handlePasswordInpt}></input>
+            {error ? <p>{error}</p>: null}
             <FormButton onClick={handleLogin}>Login</FormButton>
         </FormStyle>
     );
