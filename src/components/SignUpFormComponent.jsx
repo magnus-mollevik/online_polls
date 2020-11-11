@@ -33,7 +33,7 @@ const SignUpForm = () => {
                 password: password,
             });
             if (error) {
-                setError(error);
+                setMessage("email allready registered");
             }
             else {
                 setMessage("User " + email + " created");
