@@ -13,3 +13,5 @@ Nå blir du redirected til pollen du akkuratt har laget og kan ta den,
 den er også tilgjengelig på home og ikke inloggete brukere kan ta den. 
 
 Du kan også se at bruker og poll er nå lagt til i databasen. 
+
+(Server === PollsApi, Client === online_polls)
