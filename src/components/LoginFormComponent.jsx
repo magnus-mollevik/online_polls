@@ -31,7 +31,8 @@ const LoginForm = () => {
                 password: password
             });
         if (error) {
-            setError("Wrong username or password");
+            console.log(error)
+            setError("Wrong password or username");
         }
         
         else {

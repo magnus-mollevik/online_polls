@@ -8,6 +8,7 @@ const UndetailedPollComponent = ({polls}) => {
         <UndetailedPollSectionWrapper>{pollsFetched.map((poll) => {
             return <UndetailedPollSection>
                 <h2 key={poll.id}>{poll.pollName}</h2>
+                <h4>Poll id: {poll._id}</h4>
                 <ul>
                     {poll.questions.map((question) => {
                         return <div key={question.id}>
